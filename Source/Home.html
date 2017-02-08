@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="Teja" xmlns:list-style-position="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <title>Home</title>
+</head>
+
+<body style="background-color: lightgrey; font-family: Times New Roman; font-style: inherit">
+        <h1 align="center" style="text-shadow: 1px 1px darkolivegreen">Explore & Know about your Hangout Place !!</h1>
+<div  ng-controller="View1Ctrl">
+    <div class="menu" id="div_SearchContainer" align="center">
+        <div class = "input group input-group-lg" align="center" style="width: 20%">
+            <input type="text" id = "txt_placeName" class = "form-control" placeholder="Enter any Location" aria-describedby="basic-addon1" align="center">
+            <br>
+        </div>
+        <div class = "input group input-group-lg" align="center" style="width: 20%">
+            <input type="text" id = "txt_searchFilter" class = "form-control" placeholder="Enter your choice" aria-describedby="basic-addon1" align="center">
+            <br>
+        </div>
+        <button class = "btn btn-primary btn-lg" id="btn_getReview" ng-click="getVenues()">Get Venues</button>
+        <button class="btn btn-primary btn-lg" onclick="GetDirections()">View on Google Maps</button>
+    </div>
+    <br>
+    <div id="div_VenueList" align="center" style="font-size: x-large">
+        Top Five Locations From FourSquare Review API
+            <div ng-repeat="venue in venueList" style="align-content: center; font-size: x-large">
+            <a  href="" ng-click="getReviews(venue)">{{venue.name}}</a>
+            </div>
+          </div>
+
+    <div id="div_ReviewList" style="display:none; align-content: center" align="center" >
+        <p ng-model="ReviewWithSentiment">
+
+        <div class="panel panel-primary" align="center" style="width: 30%; font-size: large">Sentiment Analysis Using Alchemy API</div>
+        <div class="panel panel-success"  align="center" style="width: 30%">Most recent review: {{ReviewWithSentiment.reviewText}}</div>
+        <div class="panel panel-info"  align="center" style="width: 30%">Sentiment Review: {{ReviewWithSentiment.sentiment}}</div>
+        <div class="panel panel-warning"  align="center" style="width: 30%">Sentiment Score: {{ReviewWithSentiment.score}}</div>
+        <div class="panel panel-danger"  align="center" style="width: 30%">{{ReviewWithSentiment.reviewText}}</div>
+
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+<script src="JS/Home.js"></script>
+</body>
+
+</html>
