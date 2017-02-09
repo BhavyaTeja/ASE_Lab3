@@ -4,10 +4,13 @@ Advanced Software Engineering - Lab Assignment III
 The Lab Assignment is to develop a web application which has the following functionalities.
   1. Login & Register
   2. Facebook Login Authentication 
-  3. Implementing APIs.
-      i.   Four Square Search API
-      ii.  Alchemy Sentiment Analysis API
-      iii. Google Maps Place Search
+  3. Implementing APIs
+  
+      a. Four Square Search API
+      
+      b. Alchemy Sentiment Analysis API
+      
+      c. Google Maps Place Search
 
 The web application is developed by using the technologies HTML5, CSS, JavaScript & AngularJS.
 
