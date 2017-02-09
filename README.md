@@ -3,7 +3,7 @@ Advanced Software Engineering - Lab Assignment III
 
 The Lab Assignment is to develop a web application which has the following functionalities.
   1. Login & Register
-  2. Facebook Login Authentication 
+  2. Facebook Login Authentication
   3. Implementing APIs
   
       a. Four Square Search API
