@@ -5,10 +5,10 @@
 
 function Submit(){
     var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
-    var fname = document.form.Name.value,
-        femail = document.form.Email.value,
-        freemail = document.form.enterEmail.value,
-        fpassword = document.form.Password.value,
+    var fname = document.form.Name.value;
+        femail = document.form.Email.value;
+        freemail = document.form.enterEmail.value;
+        fpassword = document.form.Password.value;
 
     if (fname == "" )
     {
@@ -55,7 +55,7 @@ function Submit(){
         return false;
     }
     }
-    if(fname != '' && femail != '' && freemail != '' && fpassword != '')
+    if(fname != "" && femail != "" && freemail != "" && fpassword != "")
     {
         window.location.replace("Home.html");
         document.getElementById("errorBox").innerHTML = "form submitted successfully";
